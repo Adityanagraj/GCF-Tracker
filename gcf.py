@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 
-data=pd.read_csv("D:\\streamtest\\sce.csv");
+data=pd.read_csv("sce.csv");
 
 st.sidebar.title("Any Issues Please Contact Facilitators")
 select = ["Deepak","Aditya"]
