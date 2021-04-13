@@ -34,7 +34,7 @@ def main():
 		print("Try After Some Time")	
 
 	st.text(" ")
-	st.markdown("Developed with ❤️ and ☕ by [Deepak](https://www.linkedin.com/in/deepak-k-31a414172/)")
+	st.markdown("Developed with ❤️ and ☕ by [Aditya](https://www.linkedin.com/in/aditya-n-02a0a8192)")
 
 
 if __name__ == "__main__": 
