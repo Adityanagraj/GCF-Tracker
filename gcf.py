@@ -37,5 +37,7 @@ def main():
 	st.markdown("Developed with ❤️ and ☕ by [Deepak](https://www.linkedin.com/in/deepak-k-31a414172/)")
 
 
+
 if __name__ == "__main__": 
 	main()
+	
