@@ -1,23 +1,13 @@
 import streamlit as st
 import pandas as pd
+from pymongo import MongoClient
 
 data=pd.read_csv("sce.csv");
 
 st.sidebar.title("Any Issues Please Contact Facilitators")
-select = ["Deepak","Aditya"]
-choice = st.sidebar.selectbox("Hey👋, Whom do you What to Contact", select)
-if choice=="Deepak":
-	st.sidebar.write("Contact No 📱",'+91 89705 51466')
-	st.sidebar.markdown("Connect Us [Github](https://github.com/deepakkapse),"  "[linkedin](https://www.linkedin.com/in/deepak-k-31a414172/)")
-if choice=="Aditya":
-	st.sidebar.write("Contact No 📱",'+91 8618262232')
-	st.sidebar.markdown("Connect Us [Github](https://github.com/Adityanagraj),"  "[linkedin](https://www.linkedin.com/in/aditya-n-02a0a8192)")
 
-def main():
-	st.title("Qwiklabs Progress for GoogleCloudReady Facilitator Program 2021 🙏")
-	st.text(" ")
-	st.text(" ")
-	st.write("Facilitators: Sapthagiri College Of Engineering Bangalore")
+
+def qwiklab():
 	x=st.text_input("Please Enter your Registered Email Address Only")
 
 
@@ -36,6 +26,64 @@ def main():
 	st.text(" ")
 	st.markdown("Developed with ❤️ and ☕ by [Aditya](https://www.linkedin.com/in/aditya-n-02a0a8192)")
 
+def feedback():
+	client=MongoClient("mongodb+srv://aditya:aditya@gcf-cluster.vfgbl.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
+	db=client.get_database('myFirstDatabase')
+	records=db.test
+	data=st.text_input("Please Enter Only Once after you have given feedback")
+	summary={
+	    "student_feedback":data
+	}
+	records.insert_one(summary)
+	
+	
+
+def collective_feedback_list():
+	client=MongoClient("mongodb+srv://aditya:aditya@gcf-cluster.vfgbl.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
+	db=client.get_database('myFirstDatabase')
+	records=db.test
+	st.text(" ")
+	st.text(" ")
+	mydoc=records.find({'student_feedback':{'$gt':'a'}},{'_id':False})
+	st.write("What Participants are Saying ❤️ ")
+	summary_list=[]
+	for i in mydoc:
+	    st.write(i['student_feedback'])
+
+
+def article():
+	st.write("article written success")
+
+
+
+def main():
+	st.title("Qwiklabs Progress for GoogleCloudReady Facilitator Program 2021 🙏")
+	st.text(" ")
+	st.text(" ")
+	st.write("Facilitators: Sapthagiri College Of Engineering Bangalore")
+	fac_select = ["Deepak","Aditya"]
+	fac_choice = st.sidebar.radio("Hey👋, Whom do you What to Contact", fac_select)
+	if fac_choice=="Deepak":
+		st.sidebar.write("Contact No 📱",'+91 89705 51466')
+		st.sidebar.markdown("Connect Us [Github](https://github.com/deepakkapse),"  "[linkedin](https://www.linkedin.com/in/deepak-k-31a414172/)")
+	if fac_choice=="Aditya":
+		st.sidebar.write("Contact No 📱",'+91 8618262232')
+		st.sidebar.markdown("Connect Us [Github](https://github.com/Adityanagraj),"  "[linkedin](https://www.linkedin.com/in/aditya-n-02a0a8192)")
+	
+	score=["Quests","Feedback","Article"]
+	score_choice=st.sidebar.selectbox("Find your Progress here 🥳",score)
+	if score_choice=="Quests":
+		qwiklab()
+	if score_choice=="Feedback":
+		feedback()
+		collective_feedback_list()
+	if score_choice=="Article":
+		article()
+
+	
+
+
 
 if __name__ == "__main__": 
 	main()
+
