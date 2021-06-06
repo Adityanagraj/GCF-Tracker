@@ -8,6 +8,10 @@ st.sidebar.title("Any Issues Please Contact Facilitators")
 
 
 def qwiklab():
+	st.title("Qwiklabs Progress for GoogleCloudReady Facilitator Program 2021 🙏")
+	st.text(" ")
+	st.text(" ")
+	st.write("Facilitators: Sapthagiri College Of Engineering Bangalore")
 	x=st.text_input("Please Enter your Registered Email Address Only")
 
 
@@ -24,9 +28,13 @@ def qwiklab():
 		print("Try After Some Time")	
 
 	st.text(" ")
-	st.markdown("Developed with ❤️ and ☕ by [Aditya](https://www.linkedin.com/in/aditya-n-02a0a8192)")
+	st.markdown("Developed with ❤️ and ☕ by [Aditya N](https://www.linkedin.com/in/aditya-n-02a0a8192) & [Deepak K](https://www.linkedin.com/in/deepak-k-31a414172/)")
 
 def feedback():
+	st.title("GoogleCloudReady Facilitator Program 2021 Feedback🙏")
+	st.text(" ")
+	st.text(" ")
+	st.write("Facilitators: Sapthagiri College Of Engineering Bangalore")
 	client=MongoClient("mongodb+srv://aditya:aditya@gcf-cluster.vfgbl.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
 	db=client.get_database('myFirstDatabase')
 	records=db.test
@@ -52,15 +60,16 @@ def collective_feedback_list():
 
 
 def article():
+	st.title("Welcome to Articles Zone 📚")
 	st.write("article written success")
+
+
+def swags():
+	st.write("swags working")
 
 
 
 def main():
-	st.title("Qwiklabs Progress for GoogleCloudReady Facilitator Program 2021 🙏")
-	st.text(" ")
-	st.text(" ")
-	st.write("Facilitators: Sapthagiri College Of Engineering Bangalore")
 	fac_select = ["Deepak","Aditya"]
 	fac_choice = st.sidebar.radio("Hey👋, Whom do you What to Contact", fac_select)
 	if fac_choice=="Deepak":
@@ -70,7 +79,7 @@ def main():
 		st.sidebar.write("Contact No 📱",'+91 8618262232')
 		st.sidebar.markdown("Connect Us [Github](https://github.com/Adityanagraj),"  "[linkedin](https://www.linkedin.com/in/aditya-n-02a0a8192)")
 	
-	score=["Quests","Feedback","Article"]
+	score=["Quests","Feedback","Article","Swags"]
 	score_choice=st.sidebar.selectbox("Find your Progress here 🥳",score)
 	if score_choice=="Quests":
 		qwiklab()
@@ -79,6 +88,8 @@ def main():
 		collective_feedback_list()
 	if score_choice=="Article":
 		article()
+	if score_choice=="Swags":
+		swags()
 
 	
 
