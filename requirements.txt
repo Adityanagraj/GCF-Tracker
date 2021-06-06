@@ -1,2 +1,4 @@
 streamlit==0.80.0
 pandas==1.2.3
+pymongo==3.11.4
+dnspython==2.1.0
