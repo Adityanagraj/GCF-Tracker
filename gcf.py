@@ -90,7 +90,7 @@ def swags():
 	st.title("Big Surpise!!!")
 	st.write('''
 		   
-We are amazed to see your active participation in the program and hence here we are with surprise swags for all of you!!!
+We are amazed to see your active participation in the program and hence here we are with **surprise swags** for all of you!!!
 Time to bid farewell with some amazing extra swags!
 
 1: Tshirt Goodie by Cockroach DB
