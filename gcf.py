@@ -48,7 +48,6 @@ def feedback():
 	summary={
 		"student_feedback":data
 	}
-	st.button("submit")
 	if len(summary['student_feedback'])>0:
 		records.insert_one(summary)
 		st.write("Thank you for your Valuable Feedback🙏")
@@ -123,7 +122,7 @@ We are not responsible for  swags offer guarantee or  expiry  of the offer**
 
 
 def main():
-	fac_select = ["Deepak","Aditya"]
+	fac_select = ["Deepak K","Aditya N"]
 	fac_choice = st.sidebar.radio("Hey👋, Whom do you What to Contact", fac_select)
 	if fac_choice=="Deepak":
 		st.sidebar.write("Contact No 📱",'+91 89705 51466')
@@ -145,14 +144,14 @@ def main():
 		article()
 	if score_choice=="Swags":
 		swags()
+	st.sidebar.title('**Special thanks to**' )
 	st.sidebar.write('''
 
-		Special thanks to \n
-Antariksh Pratham\n
-Aditya Ghuge \n
-Kushagra Arora\n
-Manikanta B\n
-Ujwal M
+📌 Antariksh Pratham\n
+📌 Aditya Ghuge \n
+📌 Kushagra Arora\n
+📌 Manikanta B\n
+📌 Ujwal M
 
 for joining hands in making this event successful🙏
 
