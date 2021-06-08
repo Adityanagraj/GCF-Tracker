@@ -62,7 +62,7 @@ def collective_feedback_list():
 	records=db.test1
 	st.text(" ")
 	st.text(" ")
-	mydoc=records.find({'student_feedback':{'$gt':'a'}},{'_id':False})
+	mydoc=records.find({'student_feedback':{'$gt':'A'}},{'_id':False})
 	st.write("What Participants are Saying ❤️ ")
 	for i in mydoc:
 		st.write(i['student_feedback'])
