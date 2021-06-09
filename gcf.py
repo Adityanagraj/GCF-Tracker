@@ -124,12 +124,12 @@ We are not responsible for  swags offer guarantee or  expiry  of the offer**
 def main():
 	fac_select = ["Deepak K","Aditya N"]
 	fac_choice = st.sidebar.radio("Hey👋, Whom do you What to Contact", fac_select)
-	if fac_choice=="Deepak":
+	if fac_choice=="Deepak K":
 		st.sidebar.write("Contact No 📱",'+91 89705 51466')
-		st.sidebar.markdown("Connect Us [Github](https://github.com/deepakkapse),"  "[linkedin](https://www.linkedin.com/in/deepak-k-31a414172/)")
-	if fac_choice=="Aditya":
+		st.sidebar.markdown("Connect Us [Github](https://github.com/deepakkapse),"  "[Twitter](https://twitter.com/deepak_kapse29)")
+	if fac_choice=="Aditya N":
 		st.sidebar.write("Contact No 📱",'+91 86182 62232')
-		st.sidebar.markdown("Connect Us [Github](https://github.com/Adityanagraj),"  "[linkedin](https://www.linkedin.com/in/aditya-n-02a0a8192)")
+		st.sidebar.markdown("Connect Us [Github](https://github.com/Adityanagraj),"  "[Twitter](https://twitter.com/nagraj1999)")
 
 	score=["Quests","Feedback","Article","Swags"]
 	score_choice=st.sidebar.selectbox("Find your Progress here 🥳",score)
