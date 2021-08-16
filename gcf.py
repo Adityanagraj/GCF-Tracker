@@ -14,7 +14,7 @@ def qwiklab():
 	st.text(" ")
 	st.write("Facilitators: Sapthagiri College Of Engineering Bangalore")
 	x=st.text_input("Please Enter your Registered Email Address Only without space")
-	st.button("Submit")
+	st.button("Submit"))
 
 	try:
 		for i in range(0,len(data)):
