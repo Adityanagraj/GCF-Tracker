@@ -41,7 +41,7 @@ def feedback():
 	st.text(" ")
 	st.text(" ")
 	st.write("Facilitators: Sapthagiri College Of Engineering Bangalore")
-	client=MongoClient("mongodb+srv://aditya:aditya@gcf-cluster.vfgbl.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
+	client=MongoClient("DATABASE_CONN")
 	db=client.get_database('myFirstDatabase')
 	records=db.test1
 	data=st.text_input("Please click Only Once on submit button after you have given feedback")
