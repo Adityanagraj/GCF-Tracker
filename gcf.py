@@ -57,7 +57,7 @@ def feedback():
 	
 
 def collective_feedback_list():
-	client=MongoClient( "${{ secrets.DATABASE_CONN }}" )
+	client=MongoClient( "DATABASE_CONN" )
 	db=client.get_database('myFirstDatabase')
 	records=db.test1
 	st.text(" ")
