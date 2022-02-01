@@ -57,7 +57,7 @@ def feedback():
 	
 
 def collective_feedback_list():
-	client=MongoClient( "DATABASE_CONN" )
+	client=MongoClient( "mongodb+srv://aditya:aditya@gcf-cluster.vfgbl.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
 	db=client.get_database('myFirstDatabase')
 	records=db.test1
 	st.text(" ")
